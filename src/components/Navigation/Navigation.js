@@ -1,14 +1,60 @@
-import React from "react";
+import React from 'react';
+import styled from 'styled-components';
+import {Link} from 'gatsby';
+
+const NavigationWrapper = styled.nav`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: 'Montserrat', sans-serif;
+  
+  a {
+    color: inherit;
+    text-decoration: none;
+  };
+`;
+
+const Logo = styled.span`
+  margin-right: 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 20px;
+`;
+
+const NavigationList= styled.ul`
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+`;
+
+const NavigationListItem = styled.li`
+    margin-left: 30px;
+    font-weight: 600;
+    font-size: 15px;
+`;
 
 const Navigation = () => (
-    <nav>
-        <span>HELLO MY DEV</span>
-        <ul>
-            <li>articles</li>
-            <li>about</li>
-            <li>contact</li>
-        </ul>
-    </nav>
+    <NavigationWrapper>
+        <Logo>HELLO MY DEV</Logo>
+        <NavigationList>
+            <NavigationListItem>
+                <Link to={'/articles'}>
+                    articles
+                </Link>
+            </NavigationListItem>
+            <NavigationListItem>
+                <Link to={'/about'}>
+                    about
+                </Link>
+            </NavigationListItem>
+            <NavigationListItem>
+                <Link to={'/contact'}>
+                    contact
+                </Link>
+            </NavigationListItem>
+        </NavigationList>
+    </NavigationWrapper>
 );
 
 export default Navigation;
