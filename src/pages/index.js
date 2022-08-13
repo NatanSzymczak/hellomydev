@@ -1,14 +1,11 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 import Seo from "../components/seo"
-import Navigation from "../components/Navigation/Navigation";
+import MainLayouts from "../layouts";
 
 const IndexPage = () => (
-  <>
-      <Navigation/>
+  <MainLayouts>
     <Seo title="Home" />
-  </>
+  </MainLayouts>
 )
 
 export const Head = () => <Seo title="Home" />
