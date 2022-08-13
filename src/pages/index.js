@@ -5,6 +5,7 @@ import MainLayouts from "../layouts";
 const IndexPage = () => (
   <MainLayouts>
     <Seo title="Home" />
+      <p>Home page</p>
   </MainLayouts>
 )
 

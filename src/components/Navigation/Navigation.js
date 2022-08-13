@@ -3,29 +3,31 @@ import styled from 'styled-components';
 import {Link} from 'gatsby';
 
 const NavigationWrapper = styled.nav`
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  font-family: 'Montserrat', sans-serif;
-  
-  a {
-    color: inherit;
-    text-decoration: none;
-  };
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: 'Montserrat', sans-serif;
+
+    a {
+        color: inherit;
+        text-decoration: none;
+    }
+;
 `;
 
 const Logo = styled.span`
-  margin-right: 10px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 700;
-  font-size: 20px;
+    margin-right: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
 `;
 
-const NavigationList= styled.ul`
-  display: flex;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+const NavigationList = styled.ul`
+    display: flex;
+    list-style: none;
 `;
 
 const NavigationListItem = styled.li`
