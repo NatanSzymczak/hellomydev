@@ -8,6 +8,7 @@ module.exports = {
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-styled-components`,
+    `gatsby-plugin-material-ui`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
