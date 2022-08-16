@@ -1,7 +1,7 @@
-import * as React from "react";
-import {Link} from "gatsby";
-import Seo from "../components/seo";
-import MainLayouts from "../layouts";
+import * as React from 'react';
+import { Link } from 'gatsby';
+import MainLayouts from '../layouts';
+import Seo from '../components/seo';
 
 const ArticlesPage = () => (
     <MainLayouts>
@@ -9,8 +9,8 @@ const ArticlesPage = () => (
         <p>Welcome to Articles Page</p>
         <Link to="/">Go back to the homepage</Link>
     </MainLayouts>
-)
+);
 
-export const Head = () => <Seo title="Articles Page"/>
+export const Head = () => <Seo title="Articles Page" />;
 
-export default ArticlesPage
+export default ArticlesPage;
