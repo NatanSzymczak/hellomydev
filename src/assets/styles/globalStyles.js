@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
     html {
@@ -12,17 +12,10 @@ const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        margin: 0;
-        padding: 80px 65px 0;
         font-family: 'Montserrat', sans-serif;
+        background-color: #023047;
     }
-
-
-    body {
-        margin: 0;
-        font-family: 'Montserrat', sans-serif;
-    }
-
+    
     button {
         padding: 0;
         cursor: pointer;
