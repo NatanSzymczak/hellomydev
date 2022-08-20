@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
+import { CustomButton } from '../CustomButton';
 
 const NavigationWrapper = styled.nav`
     position: absolute;
@@ -64,18 +65,30 @@ const Navigation = () => {
     return (
         <NavigationWrapper>
             <Logo>
-                <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="Logo" />
+                <GatsbyImage
+                    image={data.file.childImageSharp.gatsbyImageData}
+                    alt="Logo"
+                />
             </Logo>
             <Logo>Hello my Dev !</Logo>
             <NavigationList>
                 <NavigationListItem>
-                    <Link to="/articles">articles</Link>
+                    <CustomButton
+                        link="/articles"
+                        text={'articles'}
+                    />
                 </NavigationListItem>
                 <NavigationListItem>
-                    <Link to="/about">about</Link>
+                    <CustomButton
+                        link="/about"
+                        text={'about'}
+                    />
                 </NavigationListItem>
                 <NavigationListItem>
-                    <Link to="/contact">contact</Link>
+                    <CustomButton
+                        link="/contact"
+                        text={'contact'}
+                    />
                 </NavigationListItem>
             </NavigationList>
         </NavigationWrapper>
