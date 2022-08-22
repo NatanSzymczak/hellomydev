@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Link, graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage } from 'gatsby-plugin-image';
 import { CustomButton } from '../CustomButton';
+import { Social } from '../Social/Social';
 
 const NavigationWrapper = styled.nav`
     position: absolute;
@@ -91,6 +92,7 @@ const Navigation = () => {
                     />
                 </NavigationListItem>
             </NavigationList>
+            <Social />
         </NavigationWrapper>
     );
 };
