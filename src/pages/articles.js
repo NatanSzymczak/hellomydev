@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { graphql, useStaticQuery } from 'gatsby';
 import MainLayouts from '../layouts';
 import Seo from '../components/seo';
 
@@ -9,6 +10,8 @@ import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
 
 const ArticlesPage = () => {
+    const data = useStaticQuery(query);
+
     return (
         <MainLayouts>
             <Card sx={{ maxWidth: 345 }}>
@@ -16,7 +19,7 @@ const ArticlesPage = () => {
                     <CardMedia
                         component="img"
                         height="140"
-                        image={}
+                        image={data.file.childImageSharp.gatsbyImageData.images.fallback.src}
                         alt="green iguana"
                     />
                     <CardContent>
@@ -25,13 +28,14 @@ const ArticlesPage = () => {
                             variant="h5"
                             component="div"
                         >
-                            Card Title
+                            Lizard
                         </Typography>
                         <Typography
                             variant="body2"
                             color="text.secondary"
                         >
-                            Ullamco proident magna non nulla ex ullamco. Tempor adipisicing laboris occaecat aute Lorem culpa quis magna commodo dolore id aliquip. Commodo anim amet aliqua amet tempor elit aliquip exercitation culpa dolor quis dolor. Nulla duis duis ipsum aliqua adipisicing aliqua ullamco cupidatat proident occaecat enim ea est. Minim adipisicing exercitation elit enim deserunt tempor eu est esse culpa commodo. Mollit nisi incididunt adipisicing Lorem labore commodo dolore consectetur ex aliqua sint adipisicing et esse excepteur. Velit mollit pariatur est consectetur Lorem do proident cupidatat. Reprehenderit Lorem veniam pariatur mollit. Occaecat aliquip ut Lorem duis in cupidatat amet esse aliqua incididunt deserunt. Nostrud esse in id aliqua ad elit excepteur.
+                            Lizards are a widespread group of squamate reptiles, with over 6,000
+                            species, ranging across all continents except Antarctica
                         </Typography>
                     </CardContent>
                 </CardActionArea>
@@ -39,6 +43,16 @@ const ArticlesPage = () => {
         </MainLayouts>
     );
 };
+
+const query = graphql`
+    {
+        file(name: { eq: "lizard" }) {
+            childImageSharp {
+                gatsbyImageData(width: 450)
+            }
+        }
+    }
+`;
 
 export const Head = () => <Seo title="Articles Page" />;
 
