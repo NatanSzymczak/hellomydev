@@ -1,6 +1,6 @@
 import { createGlobalStyle } from 'styled-components';
 
-const GlobalStyle = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
     html {
         box-sizing: border-box;
     }
@@ -23,10 +23,15 @@ const GlobalStyle = createGlobalStyle`
         cursor: pointer;
     }
 
+    button {
+        padding: 0;
+        cursor: pointer;
+        font-family: 'Montserrat', sans-serif;
+        color: #fff;
+    }
+
     ul {
         padding: 0;
         margin: 0;
     }
 `;
-
-export default GlobalStyle;
