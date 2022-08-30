@@ -10,45 +10,50 @@ const NavigationWrapper = styled.nav`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
+    width: 200px;
     height: 100vh;
     top: 0;
     left: 0;
     font-family: 'Montserrat', sans-serif;
-    //background-color: cornflowerblue;
-    border: 1px solid cornflowerblue;
+    //border: 1px solid cornflowerblue;
 
     a {
-        color: inherit;
+        //color: inherit;
         text-decoration: none;
     }
 `;
 
-const Logo = styled.span`
+const Logo = styled.div`
     //background-color: cadetblue;
     //border: 1px solid cadetblue;
 
-    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 30px auto;
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 20px;
+    color: #fff;
 `;
 
 const NavigationList = styled.ul`
     //background-color: aqua;
-    border: 1px solid aqua;
-    display: flex;
+    //border: 1px solid aqua;
+    //display: flex;
     flex-direction: column;
     list-style: none;
 `;
 
 const NavigationListItem = styled.li`
     //background-color: darkcyan;
-    border: 1px solid darkcyan;
+    //border: 1px solid darkcyan;
 
     margin: 10px auto;
-    font-weight: 600;
-    font-size: 18px;
+    //font-weight: 600;
+    //font-size: 18px;
 `;
 
 const query = graphql`
