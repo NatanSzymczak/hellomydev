@@ -70,13 +70,15 @@ const Navigation = () => {
     const data = useStaticQuery(query);
     return (
         <NavigationWrapper>
-            <Logo>
-                <GatsbyImage
-                    image={data.file.childImageSharp.gatsbyImageData}
-                    alt="Logo"
-                />
-            </Logo>
-            <Logo>Hello my Dev !</Logo>
+            <Link to="/">
+                <Logo>
+                    <GatsbyImage
+                        image={data.file.childImageSharp.gatsbyImageData}
+                        alt="Logo"
+                    />
+                    <span>Hello my Dev !</span>
+                </Logo>
+            </Link>
             <NavigationList>
                 <NavigationListItem>
                     <CustomButton
