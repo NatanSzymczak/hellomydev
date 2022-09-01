@@ -46,9 +46,11 @@ const ArticlesPage = () => {
 
 const query = graphql`
     {
-        file(name: { eq: "lizard" }) {
-            childImageSharp {
-                gatsbyImageData(width: 450)
+        allArticles {
+            id
+            title
+            image {
+                url
             }
         }
     }
