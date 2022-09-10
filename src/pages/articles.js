@@ -46,11 +46,13 @@ const ArticlesPage = () => {
 
 const query = graphql`
     {
-        allArticles {
-            id
-            title
-            image {
-                url
+        allDatoCmsArticle {
+            nodes {
+                id
+                image {
+                    url
+                }
+                title
             }
         }
     }
