@@ -16,28 +16,38 @@ const ArticlesPage = () => {
         <MainLayouts>
             <Card sx={{ maxWidth: 345 }}>
                 <CardActionArea>
-                    <CardMedia
-                        component="img"
-                        height="140"
-                        image={data.file.childImageSharp.gatsbyImageData.images.fallback.src}
-                        alt="green iguana"
-                    />
-                    <CardContent>
-                        <Typography
-                            gutterBottom
-                            variant="h5"
-                            component="div"
-                        >
-                            Lizard
-                        </Typography>
-                        <Typography
-                            variant="body2"
-                            color="text.secondary"
-                        >
-                            Lizards are a widespread group of squamate reptiles, with over 6,000
-                            species, ranging across all continents except Antarctica
-                        </Typography>
-                    </CardContent>
+                    <Link
+                        href={`articles/${
+                            (data.allDatoCmsArticle.nodes[0].title,
+                            {
+                                lower: true,
+                            })
+                        }`}
+                        underline={'none'}
+                    >
+                        <CardMedia
+                            component="img"
+                            height="140"
+                            image={data.file.childImageSharp.gatsbyImageData.images.fallback.src}
+                            alt="green iguana"
+                        />
+                        <CardContent>
+                            <Typography
+                                gutterBottom
+                                variant="h5"
+                                component="div"
+                            >
+                                Lizard
+                            </Typography>
+                            <Typography
+                                variant="body2"
+                                color="text.secondary"
+                            >
+                                Lizards are a widespread group of squamate reptiles, with over 6,000
+                                species, ranging across all continents except Antarctica
+                            </Typography>
+                        </CardContent>
+                    </Link>
                 </CardActionArea>
             </Card>
         </MainLayouts>
