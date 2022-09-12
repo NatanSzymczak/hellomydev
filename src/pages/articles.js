@@ -8,6 +8,7 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
 import { CardActionArea } from '@mui/material';
+import slugify from 'slugify';
 
 const ArticlesPage = () => {
     const data = useStaticQuery(query);
@@ -17,12 +18,9 @@ const ArticlesPage = () => {
             <Card sx={{ maxWidth: 345 }}>
                 <CardActionArea>
                     <Link
-                        href={`articles/${
-                            (data.allDatoCmsArticle.nodes[0].title,
-                            {
-                                lower: true,
-                            })
-                        }`}
+                        href={`articles/${slugify(data.allDatoCmsArticle.nodes[0].title, {
+                            lower: true,
+                        })}`}
                         underline={'none'}
                     >
                         <CardMedia
