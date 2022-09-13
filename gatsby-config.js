@@ -18,6 +18,12 @@ module.exports = {
                 path: `${__dirname}/src/assets/images`,
             },
         },
+        {
+            resolve: `gatsby-source-datocms`,
+            options: {
+                apiToken: process.env.API_DATO_CMS,
+            },
+        },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         // {
