@@ -2,12 +2,11 @@ import * as React from 'react';
 import { graphql, useStaticQuery } from 'gatsby';
 import MainLayouts from '../layouts';
 import Seo from '../components/seo';
-
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Typography from '@mui/material/Typography';
-import { CardActionArea } from '@mui/material';
+import { CardActionArea, Link } from '@mui/material';
 import slugify from 'slugify';
 import styled from 'styled-components';
 
