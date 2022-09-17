@@ -18,6 +18,11 @@ const PostListWrapper = styled.nav`
     //border: 1px solid red;
 `;
 
+const Post = styled.nav`
+    margin: 30px;
+    //margin-bottom: 4vh;
+`;
+
 const ArticlesPage = () => {
     const data = useStaticQuery(query);
 
