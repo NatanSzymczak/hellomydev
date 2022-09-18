@@ -29,11 +29,12 @@ const ArticlesPage = () => {
     return (
         <MainLayouts>
             <PostListWrapper>
+                {data.allDatoCmsArticle.nodes.map(post => (
                     <Post>
                         <Card sx={{ maxWidth: 345 }}>
                             <CardActionArea>
                                 <Link
-                                    href={`articles/${slugify(title, {
+                                    href={`articles/${slugify(post.title, {
                                         lower: true,
                                     })}`}
                                     underline={'none'}
@@ -41,16 +42,17 @@ const ArticlesPage = () => {
                                     <CardMedia
                                         component="img"
                                         height="140"
-                                        image={}
+                                        image={post.image.url}
                                         alt="green iguana"
                                     />
+                                    {console.log(data)}
                                     <CardContent>
                                         <Typography
                                             gutterBottom
                                             variant="h5"
                                             component="div"
                                         >
-                                            {title}
+                                            {post.title}
                                         </Typography>
                                         <Typography
                                             variant="body2"
@@ -65,6 +67,7 @@ const ArticlesPage = () => {
                             </CardActionArea>
                         </Card>
                     </Post>
+                ))}
             </PostListWrapper>
         </MainLayouts>
     );
