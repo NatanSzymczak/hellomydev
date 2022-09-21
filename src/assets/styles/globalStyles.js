@@ -23,12 +23,12 @@ export const GlobalStyle = createGlobalStyle`
         cursor: pointer;
     }
 
-    button {
-        padding: 0;
-        cursor: pointer;
-        font-family: 'Montserrat', sans-serif;
-        color: #fff;
-    }
+    //button {
+    //    padding: 0;
+    //    cursor: pointer;
+    //    font-family: 'Montserrat', sans-serif;
+    //    color: #fff;
+    //}
 
     ul {
         padding: 0;
