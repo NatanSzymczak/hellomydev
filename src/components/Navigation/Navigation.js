@@ -17,7 +17,6 @@ const NavigationWrapper = styled.nav`
     left: 0;
     font-family: 'Montserrat', sans-serif;
     //border: 1px solid cornflowerblue;
-
     a {
         //color: inherit;
         text-decoration: none;
