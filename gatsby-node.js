@@ -16,10 +16,12 @@ exports.createPages = async ({ graphql, actions }) => {
             }
         }
     `);
-    createPage({
-        path: '/using-dsg',
-        component: require.resolve('./src/templates/using-dsg.js'),
-        context: {},
-        defer: true,
+
+    result.data.allDatoCmsArticle.nodes.forEach(post => {
+        createPage({
+            path: `articles/`,
+            component: component,
+            context: {},
+        });
     });
 };
