@@ -3,6 +3,7 @@ const slugify = require('slugify');
 
 exports.createPages = async ({ graphql, actions }) => {
     const { createPage } = actions;
+    const blogPostTemplate = path.resolve(`src/layouts/post.js`);
     const result = await graphql(`
         query queryCMSPage {
             allDatoCmsArticle {
@@ -22,7 +23,7 @@ exports.createPages = async ({ graphql, actions }) => {
 
         createPage({
             path: `articles/${slugifiedTitle}`,
-            component: component,
+            component: blogPostTemplate,
             context: {},
         });
     });
