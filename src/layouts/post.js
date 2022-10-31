@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'gatsby-image';
 import { graphql } from 'gatsby';
+import MainLayouts from '../layouts';
 
 export const query = graphql`
     query querySingleArticle($id: String!) {
@@ -14,6 +15,14 @@ export const query = graphql`
     }
 `;
 
-const PostLayout = ({ data }) => <Image fixed={data.datoCmsArticle.image.fixed} />;
+const PostLayout = ({ data }) => {
+    return (
+        <MainLayouts>
+            <div>
+                <Image fixed={data.datoCmsArticle.image.fixed} />
+            </div>
+        </MainLayouts>
+    );
+};
 
 export default PostLayout;
